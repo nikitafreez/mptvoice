@@ -1,10 +1,10 @@
-const express = require("express");
+import express from 'express';
 const app = express();
 
 const PORT = process.env.PORT || 80
 
 app.get('/', (req, res) => {
-    res.end('<h1>Сайт работает</h1>');
+    res.end('<h1>Site working...</h1>');
 })
 
 app.listen(PORT, () =>{

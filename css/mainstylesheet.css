@@ -1,0 +1,17 @@
+.blocks {
+    position: relative;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+.block {
+    margin: 10px;
+    padding: 20px 10px;
+    width: calc(33% - 24px);
+    display: inline-block;
+}
+body {
+    background-color: #f7f7f7;
+}

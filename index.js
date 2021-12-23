@@ -1,10 +1,16 @@
 import express from 'express';
-const app = express();
+import path from 'path';
 
-const PORT = process.env.PORT || 80
+const app = express();
+const __dirname = path.resolve()
+const PORT = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
-    res.end('<h1>Site working...</h1>');
+    res.sendFile(path.resolve(__dirname, 'templates', 'main.html'))
+})
+
+app.get('/detailed', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'templates', 'detailed.html'))
 })
 
 app.listen(PORT, () =>{
